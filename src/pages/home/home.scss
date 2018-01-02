@@ -1,0 +1,27 @@
+page-home {
+  .refer {
+    font-weight: bold;
+    color: #0096D9;
+    font-size: larger;
+  }
+
+  .fab {
+    contain: layout !important;
+  }
+  button[ion-fab] {
+    overflow: visible;
+    position: relative;
+
+    ion-label {
+      position: absolute;
+      top: -8px;
+      right: 40px;
+
+      color: white;
+      background-color: #8c8c8c;
+      line-height: 24px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+}

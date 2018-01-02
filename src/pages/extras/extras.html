@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40" align-items-center src="assets/imgs/logocompact.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <h4>Whoop Whoop!</h4>
+  <h6>You're almost there</h6>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="cube" item-start large></ion-icon>
+      <h2>DHL</h2>
+      <p text-wrap>Collect: Tomorrow (26 December)</p>
+      <p text-wrap>Deliver By: Wednesday (29 December)</p>
+    </ion-item>
+    <ion-item>
+      <span item-right>R 109.00</span>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-label>Collect From:</ion-label>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="arrow-back" style="color:red;"></ion-icon>
+      </ion-avatar>
+      <h3 text-wrap>420 High Road,Daggafontein, 6969</h3>
+      <button ion-button clear item-end>Change</button>
+    </ion-item>
+    <ion-label>Deliver To:</ion-label>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="arrow-forward" style="color:lawngreen;"></ion-icon>
+      </ion-avatar>
+      <h3 text-wrap>420 High Road,Daggafontein, 6969</h3>
+      <button ion-button clear item-end>Change</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="alert" style="color:#2ec95c;" item-start></ion-icon>
+      <h2 style="font-weight: bolder">Add Parcel Insurance</h2>
+      <p text-wrap>Make sure that you're covered with our super waiver and protect yourself against theft. Only R26!</p>
+    </ion-item>
+    <ion-item>
+      <ion-badge color="secondary" item-right>26 people chose this today</ion-badge>
+    </ion-item>
+    <ion-item>
+      <span style="text-decoration: line-through; font-size: 14px ; color: red" item-right>R 49.00</span>
+      <span style="font-size: 18px ; color: #15c4a1" item-right>R 26.00</span>
+    </ion-item>
+    <ion-item>
+      <ion-label>Add To Order</ion-label>
+      <ion-checkbox color="primary" checked="true"></ion-checkbox>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="heart" style="color:red;" item-start></ion-icon>
+      <h2 style="font-weight: bolder">Is this a gift?</h2>
+      <p text-wrap>Make someone's day and add gift wrapping for only R79!</p>
+    </ion-item>
+    <ion-item>
+      <ion-badge color="light" item-right>27% of people choose this</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Add To Order</ion-label>
+      <ion-checkbox color="primary" checked="true"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <span item-right style="color: #15c4a1">R 79.00</span>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Booking Summary
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <p item-left>Parcel Collection</p>
+          <p item-right>R109</p>
+        </ion-item>
+        <ion-item>
+          <p item-left>Parcel Insurance</p>
+          <p item-right>R26</p>
+        </ion-item>
+        <ion-item>
+          <p item-left>Gift Wrapping</p>
+          <p item-right >R79</p>
+        </ion-item>
+        <ion-item>
+          <h3 item-left>Subtotal</h3>
+          <h3 item-right>R214</h3>
+        </ion-item>
+        <ion-item>
+          <h3 item-left>VAT @ 14%</h3>
+          <h3 item-right>R29.96</h3>
+        </ion-item>
+        <ion-item >
+          <h2 item-left style="font-weight: bold">Total</h2>
+          <h2 item-right style="font-weight: bolder; color: #15c4a1">R243.96</h2>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button block (click)="goToPayment()">Complete Payment</button>
+</ion-content>

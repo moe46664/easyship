@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40"  align-items-center src="assets/imgs/logocompact.png" >
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-slides pager show-pager=false>
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card>
+    <ion-card-header>Send a Parcel</ion-card-header>
+    <img src="assets/imgs/parcel.png">
+    <ion-card-content>
+      <p>Get the best price for your parcel in under 30 seconds</p>
+      <ion-item>
+        <button ion-button clear item-end (click)="sendPage()">Send a new parcel</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>Manage your parcels</ion-card-header>
+    <img src="assets/imgs/delivery-truck.png">
+    <ion-card-content>
+      <p style="color: #2ec95c">3 items delivered</p>
+      <p style="color: deepskyblue">1 on the way</p>
+      <ion-item>
+        <button ion-button clear item-end (click)="managePage()">Manage parcels</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>Tell a friend!</ion-card-header>
+    <img src="assets/imgs/cardiogram.png">
+    <ion-card-content>
+      <p>Refer a friend to easyship and get <span class="refer">R25</span> off your next delivery!</p>
+      <ion-item>
+        <button ion-button clear item-end (click)="referPage()">Tell a friend</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-fab bottom right>
+    <button ion-fab color="vibrant">
+      <ion-icon name="cube"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <div></div>
+      <button ion-fab (click)="sendPage()" >
+        <ion-icon  name="send"></ion-icon>
+        <ion-label>Send a new Parcel</ion-label>
+      </button>
+      <button ion-fab (click)="managePage()">
+        <ion-icon name="search"></ion-icon>
+        <ion-label>Manage Parcels</ion-label>
+      </button>
+      <button ion-fab (click)="referPage()">
+        <ion-icon name="contacts"></ion-icon>
+        <ion-label>Refer a Friend</ion-label>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

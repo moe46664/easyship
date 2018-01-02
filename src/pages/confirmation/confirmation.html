@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40" align-items-center src="assets/imgs/logocompact.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-title><ion-icon style="color: #15c4a1" name="checkmark-circle" item-left padding></ion-icon>Payment Complete!</ion-title>
+<p>Sit back and relax - your parcel will be picked up by DHL soon. Your order details are shown below:</p>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="cube" item-start large></ion-icon>
+      <h2>DHL</h2>
+      <p text-wrap>Collect: Tomorrow (26 December)</p>
+      <p text-wrap>Deliver By: Wednesday (29 December)</p>
+    </ion-item>
+    <ion-item>
+      <span item-right>R 109.00</span>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <img src="assets/imgs/cardiogram.png">
+    <ion-card-content>
+      <p>Refer a friend to easyship and get <span style="color:#15c4a1;font-weight:bold;">R25</span> off your next delivery!</p>
+      <ion-item>
+        <button ion-button clear item-end (click)="referPage()">Tell a friend</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      Booking Summary
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <p item-left>Parcel Collection</p>
+          <p item-right>R109</p>
+        </ion-item>
+        <ion-item>
+          <p item-left>Parcel Insurance</p>
+          <p item-right>R26</p>
+        </ion-item>
+        <ion-item>
+          <p item-left>Gift Wrapping</p>
+          <p item-right >R79</p>
+        </ion-item>
+        <ion-item>
+          <h3 item-left>Subtotal</h3>
+          <h3 item-right>R214</h3>
+        </ion-item>
+        <ion-item>
+          <h3 item-left>VAT @ 14%</h3>
+          <h3 item-right>R29.96</h3>
+        </ion-item>
+        <ion-item >
+          <h2 item-left style="font-weight: bold">Total</h2>
+          <h2 item-right style="font-weight: bolder; color: #15c4a1">R243.96</h2>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button block (click)="sendAnotherParcel()">Send Another Parcel</button>
+
+</ion-content>

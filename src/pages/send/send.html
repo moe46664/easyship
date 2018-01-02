@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40"   src="assets/imgs/logocompact.png" >
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-label>Address Details</ion-label>
+  <ion-list>
+    <ion-label>Collect From:</ion-label>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/locationpin.png">
+      </ion-avatar>
+      <h3>Current Location</h3>
+      <p>Accurate to 5m</p>
+      <button ion-button clear item-end>Change</button>
+    </ion-item>
+    <ion-label>Deliver To:</ion-label>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/locationpin.png">
+      </ion-avatar>
+      <h3>420 High Road, <br>Daggafontein, 6969</h3>
+      <button ion-button clear item-end>Change</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-label>Choose a parcel size:</ion-label>
+  <div padding>
+    <ion-segment [(ngModel)]="parcelDetails">
+      <ion-segment-button value="small">
+        Small
+      </ion-segment-button>
+      <ion-segment-button value="medium">
+        Medium
+      </ion-segment-button>
+      <ion-segment-button value="large">
+        Large
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="parcelDetails">
+    <ion-list *ngSwitchCase="'small'">  <ion-card>
+      <img [src]="base64CameraImage != null ? base64CameraImage   : smallImage"/>
+      <ion-card-content>
+        <p>Envelopes, satchels or small boxes of up to 5kg</p>
+        <ion-item>
+          <button ion-button clear item-end (click)="takePhoto()" >Upload Picture</button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'medium'">
+      <ion-card>
+        <img [src]="base64CameraImage != null ? base64CameraImage   : mediumImage"/>
+        <ion-card-content>
+          <p>Bigger boxes of up to 10kg</p>
+          <ion-item>
+            <button ion-button clear item-end>Upload Picture</button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'large'">
+      <ion-card>
+        <img [src]="base64CameraImage != null ? base64CameraImage   : largeImage"/>
+        <ion-card-content>
+          <p>Boxes larger than 10kg. (A fridge?)</p>
+          <ion-item>
+            <button ion-button clear item-end>Upload Picture</button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+
+  <ion-item>
+    <ion-label>Urgent delivery?</ion-label>
+
+    <ion-toggle color="danger" checked="false"></ion-toggle>
+
+  </ion-item>
+  <ion-label text-wrap>Need to send in a hurry? No problem!</ion-label>
+
+  <button ion-button block (click)="getQuote()">Get Quote</button>
+
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40" align-items-center src="assets/imgs/logocompact.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header>
+      Complete Payment
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item >
+        <ion-icon name="lock" item-left></ion-icon>
+        <h2 item-left style="font-weight: bold">Amount:</h2>
+        <h2 item-right style="font-weight: bolder; color: #15c4a1">R243.96</h2>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+<ion-label text-center>Payments secured by:</ion-label>
+  <img src="assets/imgs/paymentlogos.png"/>
+
+  <section class="credit-card visa gr-visa">
+    <div class="logo">Visa</div>
+    <form>
+      <h2>Payment Details</h2>
+
+      <ul class="inputs">
+        <li>
+          <label>Card Number</label>
+          <input type="text" name="card_number" pattern="[0-9]{13,16}" placeholder="xxxx xxxx xxxx xxxx"
+                 class="full gr-input" required/>
+        </li>
+        <li class="expire last">
+          <label>Expiration</label>
+          <input type="text" name="expire_month" placeholder="Month" size="10" class="month gr-input" required/>
+          <input type="text" name="expire_year" placeholder="Year" size="10" class="year gr-input" required/>
+        </li>
+        <div class="clearfix"></div>
+        <li class="cvc-code last">
+          <label>CVC Code</label>
+          <input type="text" name="cvc_code" placeholder="xxx" size="10" class="gr-input" required/>
+        </li>
+        <div class="clearfix"></div>
+      </ul>
+    </form>
+    <div class="watermark">Visa</div>
+  </section>
+  <ion-item>
+    <ion-label>Save this card</ion-label>
+    <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+  </ion-item>
+  <button ion-button icon-start block (click)="showConfirmation()">
+    <ion-icon name="lock"></ion-icon>
+    Pay Now
+  </button>
+
+
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img alt="logo" height="40" align-items-center src="assets/imgs/logocompact.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <h2 padding>Your Quote</h2>
+
+  <ion-card style="border: 3px solid deepskyblue">
+    <ion-item>
+      <ion-icon name="cube" item-start large></ion-icon>
+      <h2>DHL</h2>
+      <p text-wrap>Collect: Tomorrow (26 December)</p>
+      <p text-wrap>Deliver By: Wednesday (29 December)</p>
+    </ion-item>
+    <ion-item>
+      <span item-left>R 109.00</span>
+      <span item-left style="color: deepskyblue">(Cheapest)</span>
+      <button ion-button icon-left clear item-end (click)="addExtras()">
+        <ion-icon name="arrow-forward"></ion-icon>
+        Choose
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="cube" item-start large></ion-icon>
+      <h2>The Courier Guy</h2>
+      <p text-wrap>Collect: Tomorrow (26 December)</p>
+      <p text-wrap>Deliver By: Wednesday (29 December)</p>
+    </ion-item>
+    <ion-item>
+      <span item-left>R 169.00</span>
+      <span item-left>(Fastest)</span>
+      <button ion-button icon-left clear item-end (click)="addExtras()">
+        <ion-icon name="arrow-forward"></ion-icon>
+        Choose
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="cube" item-start large></ion-icon>
+      <h2>Fastway Couriers</h2>
+      <p text-wrap>Collect: Tomorrow (26 December)</p>
+      <p text-wrap>Deliver By: Wednesday (29 December)</p>
+    </ion-item>
+    <ion-item>
+      <span item-left>R 189.00</span>
+      <button ion-button icon-left clear item-end (click)="addExtras()">
+        <ion-icon name="arrow-forward"></ion-icon>
+        Choose
+      </button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
